@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+}
+
+header {
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  color: #e60023; /* cor parecida com a do Pinterest */
+  font-size: 20px;
+  margin: 0;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+header h1:hover {
+  transform: translateX(20px);
+}
+
+
+
+header input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+main {
+  padding: 20px;
+  column-count: 4;
+  column-gap: 15px;
+}
+
+.pin {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  break-inside: avoid;
+}
+
+.pin img {
+  width: 100%;
+  display: block;
+}
+
+.pin p {
+  padding: 10px;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  main { column-count: 3; }
+}
+@media (max-width: 700px) {
+  main { column-count: 2; }
+}
+@media (max-width: 500px) {
+  main { column-count: 1; }
+}
